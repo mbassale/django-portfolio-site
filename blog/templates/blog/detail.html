@@ -1,6 +1,17 @@
 {% extends 'layouts/base.html' %}
 {% block content %}
-    <div class="container">
-
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">{{ post.title }}</h1>
+            <p class="text-muted">{{ post.pub_date }}</p>
+            <p class="text-lead">{{ post.summary }}</p>
+        </div>
     </div>
+    <div class="container">
+        <img src="{{ post.image.url }}" class="img-fluid">
+        <p class="text-justify my-5">
+            {{ post.body }}
+        </p>
+    </div>
+    <hr />
 {% endblock %}

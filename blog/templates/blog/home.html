@@ -10,12 +10,12 @@
                     <div class="card mx-2 my-2" style="width: 18rem;">
                         <img src="{{ post.image.url }}" class="card-img-top img-fluid" alt="{{ post.title }}">
                         <div class="card-body">
-                            <h5 class="card-title">{{ post.title }}</h5>
+                            <h5 class="card-title"><a href="{% url 'blog_detail' post.id %}">{{ post.title }}</a></h5>
                             <p class="text-muted">{{ post.pub_date_pretty }}</p>
                             <p class="card-text text-justify">
                                 {{ post.summary }}
                             </p>
-                            <a href="#" class="btn btn-primary">Read full story</a>
+                            <a href="{% url 'blog_detail' post.id %}" class="btn btn-primary">Read full story</a>
                         </div>
                     </div>
                 </div>
